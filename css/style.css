@@ -15,11 +15,9 @@ body
 /* Header*/
 #header
 {
-  height: 243PX;
-  margin: 0px auto 15px auto;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  color: #F5F5DC;
-  
+  height: 242PX;
+  background: url(images/header.png) no-repeat left top;
+  clear: both;
 }
 
 #topbar
