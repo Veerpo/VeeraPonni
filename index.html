@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <meta http-equiv="Content-Type" content="text/html; charset=uf-8"/>
 <html>
+<head>
 <style type = "text/css">
   body {background-color: #0000A0;}
   h1 {color: white; text-align:center;}
@@ -18,43 +19,75 @@
   
   p3 {text-align: left;
       color: white;}
+  
+  /*TESTING*/
+  * {
+    box-sizing: border-box;
+}
+.header, .footer {
+    background-color: grey;
+    color: white;
+    padding: 15px;
+}
+.column {
+    float: left;
+    padding: 15px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.menu {
+    width: 25%;
+}
+.content {
+    width: 75%;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #33b5e5;
+    color: #ffffff;
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+  
+<title>Golden Eye</title>
+  /*TESTING*/
  
 </style>
-  <head>
-      <title>Look upon the golden eye</title>
-      <link href="VeeraPonni/css/style.css" rel="stylesheet" type="text/css">
-  </head>
+</head>
   
-  <body>
-      <div id="wrap">
-   <div id="topbar">
-     <div id="menus">
-       <ul id="topmenu">
-        <li class="active"><a href="#">Home</a>
-         </li>
-        <li><a onclick="changecolor()">Change BG</a></span>
-         </li>
-        <li><a href="#">Services1</a>
-         </li>
-        <li><a href="#">Services2</a>
-          </li>
-        <li><a href="#">Services3</a>
-          </li>
-        </ul>
-        </div>
-        </div>
-     
+<body>
+
+<div class="header">
     <h1>   
       Goodbye wasteland, this is my 347th 
-    <br> 
-    <p2>  
-    <b><u>
+    <br><p2><b><u>
       garbage collection
-    </b></u>
-    </p2>
+    </b></u></p2>
     </h1>
+</div>
+
+<div class="clearfix">
+  <div class="column menu">
+    <ul>
+      <li>Darkness</li>
+      <li>Will</li>
+      <li>Swallow</li>
+      <li>You</li>
+      <li>Whole</li>
+    </ul>
+  </div>
   
-<br>
+<div class="column content">
     <p>
       Fine, Fine. Let's be serious for a sec. Here's a totally cool picture for you.
       <br>
@@ -86,9 +119,9 @@
   <li>Rogue</li>
 </ol>
 </centered>
+  
+</div>
+</div>
 
-</div>
-</div>
-    </div>
   </body>
 </html>
