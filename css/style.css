@@ -1,126 +1,72 @@
-body
-{
-  background: #F0FFFF url (images.bg.jpg) repeat-x;
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
 }
+.header, .footer {
+    background-color: grey;
+    color: white;
+    padding: 15px;
+}
+.column {
+    float: left;
+    padding: 15px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.menu {
+    width: 25%;
+}
+.content {
+    width: 75%;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #33b5e5;
+    color: #ffffff;
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+</style>
+</head>
+<body>
 
-#wrap
-{
-  width: 700px;
-  margin: 0px auto 15px auto;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  color: #666666;
-}
+<div class="header">
+  <h1>Chania</h1>
+</div>
 
-/* Header*/
-#header
-{
-  height: 242PX;
-  margin: 0px auto 15px auto;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  color: #F5F5DC;
-}
+<div class="clearfix">
+  <div class="column menu">
+    <ul>
+      <li>The Flight</li>
+      <li>The City</li>
+      <li>The Island</li>
+      <li>The Food</li>
+    </ul>
+  </div>
 
-#topbar
-{
-  height: 78px;
-}
+  <div class="column content">
+    <h1>The City</h1>
+    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+    <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+  </div>
+</div>
 
-/*Header menu*/
-#topmenu
-{
-  display: block;
-  list-style: none;
-  padding: 0 0px 0px 278 px;
-  float: right;
-  width: 415px;
-}
+<div class="footer">
+  <p>Footer Text</p>
+</div>
 
-#topmenu li
-{
-  display: inline;
-}
-
-#topmenu a
-{
-  display: block;
-  float: left;
-  height: 28px;
-  margin 0px 0px 0px0px;
-  text-decoration: none;
-  padding: 9px 15px 0px 15px;
-  text-align: center;
-}
-
-#topmenu a, #topmenu a:visited, #topmenu a:active
-{
-  color: #FFFFFF;
-}
-
-#topmenu a: hover
-{
-  color: #ffffff;
-  background-color: #B52E10;
-}
-
-#topmenu .active a, #topmenu .active a:visited, #topmenu .active a:active
-{
-  color: #FFFFFF;
-  background-color: #B42D0F;
-}
-
-/*Content*/
-#content
-{
-  background-color: #FFFFFF;
-}
-
-#mainpage
-{
-  width: 700xp;
-  float: left;
-  padding:5px 5px 5px 0px;
-  height: auto
-}
-
-#mainpage p
-{
-  line-height: 22px;
-  margin: 5px 5px 5px 0px;
-  text-align: justify;
-}
-
-#mainpage blockquote
-{
-  background: #efefef;
-  display: block;
-  margin: 5px;
-  font: Georgia, "Times New Roman", Times, serif;
-  font-style: italic;
-}
-
-h1, h2, h3, h4, h5
-{
-  color: #B32C0E;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-##mainpage h1
-{
-  font-size: 24px;
-  color: #F2F7F3;
-}
-##mainpage h2
-{
-  font-size: 18px;
-  padding-top: 20xp;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #B52E10;
-}
-#mainpage h3
-{font-size: 20xp;}
-#mainpage h4 
-{font-size: 18xp;}
-#mainpage h5
-{font-size: 16xp;}
+</body>
+</html>
