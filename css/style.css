@@ -22,6 +22,11 @@ body
   
 }
 
+#topbar
+{
+  height: 78px;
+}
+
 /*Header menu*/
 #topmenu
 {
