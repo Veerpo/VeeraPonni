@@ -120,25 +120,24 @@ d&#795;&#835;&#832;&#784;&#844;&#848;&#835;&#773;&#865;&#804;&#816;&#791;&#839;&
     <h3>I Know Where You Are</h3>
     <div id="map"></div>
     <script>
-      function initMap() {
-        var uluru = {lat: 64.222178, lng: 27.727850};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-
-function getLocation() {
+      var x = document.getElementById("demo");
+      
+      function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
+      }  
+        function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
 
-      }
+
+    
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXh5a_thwHQeFdI63fYLrdCPk1bBF70Ec&callback=initMap">
