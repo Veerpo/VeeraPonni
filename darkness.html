@@ -158,6 +158,34 @@ d&#795;&#835;&#832;&#784;&#844;&#848;&#835;&#773;&#865;&#804;&#816;&#791;&#839;&
 <br>
 
 </centered>
+
+  <script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+  
+  <body>
+
+<h2>Drag and Drop</h2>
+<p>Drag the image back and forth between the two div elements.</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <a href="https://ih1.redbubble.net/image.32147080.0263/sticker,375x360-bg,ffffff.png"" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  
   
 </div>
 </div>
