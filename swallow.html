@@ -116,10 +116,16 @@ d&#795;&#835;&#832;&#784;&#844;&#848;&#835;&#773;&#865;&#804;&#816;&#791;&#839;&
 <p1>warning: really scary hands. type 'comfort' to feel better
   
   function validateForm() {
-    var x = document.forms["myForm"]["fname"].value;
+    var x = document.forms["myForm"]["comfort"].value;
     if (x == "") {
         alert("You will not receive comfort like this.");
         return false;
+  
+  function validateForm() {
+    var x = document.forms["myForm"]["comfort"].value;
+    if (x == "comfort") {
+        alert("I lied. There's no comfort in this endless space of misery.");
+        return true;
     }
 }
   
